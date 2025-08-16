@@ -1,0 +1,13 @@
+digraph "pLua; 482 samples" {
+node [width=0.375,height=0.25];
+Legend [shape=box,fontsize=24,shape=plaintext,label="pLua\lTotal samples: 482\lFocusing on: 482\lDropped nodes with <= 2 abs(samples)\lDropped edges with <= 0 samples\l"];
+N1 [label="[C]:\n?\n0 (0.0%)\rof 482 (100.0%)\r",shape=box,fontsize=8.0];
+N2 [label="global\n'test'\n0 (0.0%)\rof 482 (100.0%)\r",shape=box,fontsize=8.0];
+N3 [label="global\n'test1'\n9 (1.9%)\rof 482 (100.0%)\r",shape=box,fontsize=14.8];
+N4 [label="main\nchunk\n0 (0.0%)\rof 482 (100.0%)\r",shape=box,fontsize=8.0];
+N5 [label="field\n'?'\n473 (98.1%)\r",shape=box,fontsize=57.5];
+N1 -> N4 [label=482, weight=75, style="setlinewidth(2.000000)"];
+N2 -> N3 [label=482, weight=75, style="setlinewidth(2.000000)"];
+N4 -> N2 [label=482, weight=75, style="setlinewidth(2.000000)"];
+N3 -> N5 [label=473, weight=74, style="setlinewidth(2.000000)"];
+}

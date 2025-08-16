@@ -1,4 +1,6 @@
 #! /bin/sh
+set -e
+
 dir=$(cd `dirname $0`;pwd)
 projectdir=$dir
 builddir="$projectdir/build"
@@ -8,7 +10,7 @@ lua="$projectdir/dep/lua-5.3.6.tar.gz"
 
 if [ -f "$lua" ] && [ ! -d "$luadir" ]; then
   cd $projectdir/dep && tar zxvf $lua
-  cd $projectdir && cp $projectdir/dep/lua-5.3.6/src/*.h $projectdir/src
+  #cd $projectdir && cp $projectdir/dep/lua-5.3.6/src/*.h $projectdir/src
 fi
 
 if [ ! -d "$rundir" ]; then
@@ -26,8 +28,14 @@ cmake ../
 make
 
 cd ../tools
-GO111MODULE=off go build plua.go
-GO111MODULE=off go build png.go
+# 使用 Go Modules 并设置代理以避免 golang.org/x 访问失败
+export GOPROXY=${GOPROXY:-https://goproxy.cn,direct}
+if [ ! -f "go.mod" ]; then
+  go mod init plua-tools
+fi
+go mod tidy
+go build plua.go
+go build png.go
 
 chmod a+x pprof
 chmod a+x *.pl

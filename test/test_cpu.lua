@@ -14,6 +14,7 @@ function test1(n)
 		local j = i*n
 		local f = "test2"..((i % 5) + 1)
 		_G[f](j)
+        --test21(j)
 	end
 
 end

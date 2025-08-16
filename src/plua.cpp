@@ -34,7 +34,7 @@ extern "C" {
 #include "lauxlib.h"
 }
 
-const int open_debug = 0;
+const int open_debug = 1;
 int gSampleCount = 0;
 std::string gFilename;
 lua_State *gL = 0;
@@ -78,7 +78,7 @@ void llog(const char *header, const char *file, const char *func, int pos, const
     fclose(pLog);
 }
 
-static const int MAX_FUNC_NAME_SIZE = 127;
+static const int MAX_FUNC_NAME_SIZE = 512;
 
 static std::string get_funcname(lua_State *L, lua_Debug *ar) {
     char buf[MAX_FUNC_NAME_SIZE + 1] = {0};
@@ -268,7 +268,7 @@ static void get_cur_callstack(lua_State *L, CallStack &cs) {
             continue;
         }
 
-        LLOG("%s %d %d", funcname, id, last);
+        LLOG("%s %d %d", funcname.c_str(), id, last);
 
         cs.stack[cs.depth] = id;
         cs.depth++;
