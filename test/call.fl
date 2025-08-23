@@ -1,2 +1,6 @@
-[C](-1): ?;main chunk;global 'test';global 'test1';field '?' 473
-[C](-1): ?;main chunk;global 'test';global 'test1' 9
+[C](-1): ?;main chunk;global 'test';global 'test1';function 'test_cpu.lua:53' 152
+[C](-1): ?;main chunk;global 'test';global 'test1';function 'test_cpu.lua:29' 49
+[C](-1): ?;main chunk;global 'test';global 'test1' 4
+[C](-1): ?;main chunk;global 'test';global 'test1';function 'test_cpu.lua:37' 72
+[C](-1): ?;main chunk;global 'test';global 'test1';function 'test_cpu.lua:45' 131
+[C](-1): ?;main chunk;global 'test';global 'test1';function 'test_cpu.lua:21' 26

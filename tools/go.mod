@@ -1,8 +1,8 @@
-module plua-tools
+module github.com/esrrhs/pLua/tools
 
 go 1.22.0
 
-toolchain go1.23.12
+toolchain go1.24.6
 
 require github.com/goccy/go-graphviz v0.2.9
 

@@ -21,4 +21,7 @@ CMakeSettings.json
 .vs/
 .a
 
+.cursor/
+
 dep/lua-5.3.6/
+src/l*.h

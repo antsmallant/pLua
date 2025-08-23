@@ -82,14 +82,15 @@ static const int MAX_FUNC_NAME_SIZE = 512;
 
 static std::string get_funcname(lua_State *L, lua_Debug *ar) {
     char buf[MAX_FUNC_NAME_SIZE + 1] = {0};
-    if (*ar->namewhat != '\0')  /* is there a name from code? */ {
-        snprintf(buf, MAX_FUNC_NAME_SIZE, "%s '%s'", ar->namewhat, ar->name);  /* use it */
-    } else if (*ar->what == 'm')  /* main? */ {
+    // 仅当 name 存在且不是 "?" 时，才采用 namewhat/name；否则回退到定义位置
+    if (*ar->namewhat != '\0' && ar->name && strcmp(ar->name, "?") != 0) {
+        snprintf(buf, MAX_FUNC_NAME_SIZE, "%s '%s'", ar->namewhat, ar->name);
+    } else if (*ar->what == 'm') {
         snprintf(buf, MAX_FUNC_NAME_SIZE, "main chunk");
-    } else if (*ar->what != 'C')  /* for Lua functions, use <file:line> */ {
+    } else if (*ar->what != 'C') {
         snprintf(buf, MAX_FUNC_NAME_SIZE, "function <%s:%d>", ar->short_src, ar->linedefined);
-    } else  /* nothing left... */ {
-        snprintf(buf, MAX_FUNC_NAME_SIZE, "%s(%d): %s\n", ar->short_src, ar->currentline, ar->name ? ar->name : "?");
+    } else {
+        snprintf(buf, MAX_FUNC_NAME_SIZE, "%s(%d): %s", ar->short_src, ar->currentline, ar->name ? ar->name : "?");
     }
     return buf;
 }

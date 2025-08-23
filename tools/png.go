@@ -41,6 +41,8 @@ func showpng(dot string, png string) {
 		os.Exit(1)
 	}
 
+	ctx := context.Background()
+
 	graph, err := graphviz.ParseBytes(inputdata)
 	if err != nil {
 		fmt.Println(err)
@@ -48,7 +50,6 @@ func showpng(dot string, png string) {
 	}
 
 	if png != "" {
-		ctx := context.Background()
 		g, err := graphviz.New(ctx)
 		if err != nil {
 			fmt.Println(err)

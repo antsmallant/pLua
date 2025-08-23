@@ -1,13 +1,21 @@
-digraph "pLua; 482 samples" {
+digraph "pLua; 434 samples" {
 node [width=0.375,height=0.25];
-Legend [shape=box,fontsize=24,shape=plaintext,label="pLua\lTotal samples: 482\lFocusing on: 482\lDropped nodes with <= 2 abs(samples)\lDropped edges with <= 0 samples\l"];
-N1 [label="[C]:\n?\n0 (0.0%)\rof 482 (100.0%)\r",shape=box,fontsize=8.0];
-N2 [label="global\n'test'\n0 (0.0%)\rof 482 (100.0%)\r",shape=box,fontsize=8.0];
-N3 [label="global\n'test1'\n9 (1.9%)\rof 482 (100.0%)\r",shape=box,fontsize=14.8];
-N4 [label="main\nchunk\n0 (0.0%)\rof 482 (100.0%)\r",shape=box,fontsize=8.0];
-N5 [label="field\n'?'\n473 (98.1%)\r",shape=box,fontsize=57.5];
-N1 -> N4 [label=482, weight=75, style="setlinewidth(2.000000)"];
-N2 -> N3 [label=482, weight=75, style="setlinewidth(2.000000)"];
-N4 -> N2 [label=482, weight=75, style="setlinewidth(2.000000)"];
-N3 -> N5 [label=473, weight=74, style="setlinewidth(2.000000)"];
+Legend [shape=box,fontsize=24,shape=plaintext,label="pLua\lTotal samples: 434\lFocusing on: 434\lDropped nodes with <= 2 abs(samples)\lDropped edges with <= 0 samples\l"];
+N1 [label="[C]:\n?\n0 (0.0%)\rof 434 (100.0%)\r",shape=box,fontsize=8.0];
+N2 [label="global\n'test'\n0 (0.0%)\rof 434 (100.0%)\r",shape=box,fontsize=8.0];
+N3 [label="global\n'test1'\n4 (0.9%)\rof 434 (100.0%)\r",shape=box,fontsize=12.8];
+N4 [label="main\nchunk\n0 (0.0%)\rof 434 (100.0%)\r",shape=box,fontsize=8.0];
+N5 [label="function\n'test_cpu.lua:53'\n152 (35.0%)\r",shape=box,fontsize=37.6];
+N6 [label="function\n'test_cpu.lua:45'\n131 (30.2%)\r",shape=box,fontsize=35.5];
+N7 [label="function\n'test_cpu.lua:37'\n72 (16.6%)\r",shape=box,fontsize=28.4];
+N8 [label="function\n'test_cpu.lua:29'\n49 (11.3%)\r",shape=box,fontsize=24.8];
+N9 [label="function\n'test_cpu.lua:21'\n26 (6.0%)\r",shape=box,fontsize=20.2];
+N1 -> N4 [label=434, weight=70, style="setlinewidth(2.000000)"];
+N2 -> N3 [label=434, weight=70, style="setlinewidth(2.000000)"];
+N4 -> N2 [label=434, weight=70, style="setlinewidth(2.000000)"];
+N3 -> N5 [label=152, weight=33, style="setlinewidth(2.000000)"];
+N3 -> N6 [label=131, weight=30, style="setlinewidth(1.811060)"];
+N3 -> N7 [label=72, weight=19, style="setlinewidth(0.995392)"];
+N3 -> N8 [label=49, weight=15, style="setlinewidth(0.677419)"];
+N3 -> N9 [label=26, weight=9, style="setlinewidth(0.359447)"];
 }

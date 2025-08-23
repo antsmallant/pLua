@@ -430,28 +430,44 @@
 <text id="matched" x="1090.00" y="149" > </text>
 <g id="frames">
 <g >
-<title>global 'test1' (482 samples, 100.00%)</title><rect x="10.0" y="53" width="1180.0" height="15.0" fill="rgb(235,57,5)" rx="2" ry="2" />
-<text  x="13.00" y="63.5" >global 'test1'</text>
+<title>function 'test_cpu.lua:53' (152 samples, 35.02%)</title><rect x="776.7" y="37" width="413.3" height="15.0" fill="rgb(215,88,52)" rx="2" ry="2" />
+<text  x="779.73" y="47.5" >function 'test_cpu.lua:53'</text>
 </g>
 <g >
-<title>all (482 samples, 100%)</title><rect x="10.0" y="117" width="1180.0" height="15.0" fill="rgb(231,207,6)" rx="2" ry="2" />
+<title>all (434 samples, 100%)</title><rect x="10.0" y="117" width="1180.0" height="15.0" fill="rgb(227,200,9)" rx="2" ry="2" />
 <text  x="13.00" y="127.5" ></text>
 </g>
 <g >
-<title>global 'test' (482 samples, 100.00%)</title><rect x="10.0" y="69" width="1180.0" height="15.0" fill="rgb(243,52,54)" rx="2" ry="2" />
-<text  x="13.00" y="79.5" >global 'test'</text>
+<title>global 'test1' (434 samples, 100.00%)</title><rect x="10.0" y="53" width="1180.0" height="15.0" fill="rgb(221,86,46)" rx="2" ry="2" />
+<text  x="13.00" y="63.5" >global 'test1'</text>
 </g>
 <g >
-<title>field '?' (473 samples, 98.13%)</title><rect x="32.0" y="37" width="1158.0" height="15.0" fill="rgb(253,158,18)" rx="2" ry="2" />
-<text  x="35.03" y="47.5" >field '?'</text>
+<title>function 'test_cpu.lua:37' (72 samples, 16.59%)</title><rect x="224.8" y="37" width="195.8" height="15.0" fill="rgb(235,110,3)" rx="2" ry="2" />
+<text  x="227.79" y="47.5" >function 'test_cpu.lua:37'</text>
 </g>
 <g >
-<title>main chunk (482 samples, 100.00%)</title><rect x="10.0" y="85" width="1180.0" height="15.0" fill="rgb(253,44,31)" rx="2" ry="2" />
+<title>function 'test_cpu.lua:29' (49 samples, 11.29%)</title><rect x="91.6" y="37" width="133.2" height="15.0" fill="rgb(210,7,51)" rx="2" ry="2" />
+<text  x="94.57" y="47.5" >function 'test_c..</text>
+</g>
+<g >
+<title>[C](-1): ? (434 samples, 100.00%)</title><rect x="10.0" y="101" width="1180.0" height="15.0" fill="rgb(233,6,13)" rx="2" ry="2" />
+<text  x="13.00" y="111.5" >[C](-1): ?</text>
+</g>
+<g >
+<title>function 'test_cpu.lua:21' (26 samples, 5.99%)</title><rect x="20.9" y="37" width="70.7" height="15.0" fill="rgb(208,173,17)" rx="2" ry="2" />
+<text  x="23.88" y="47.5" >functio..</text>
+</g>
+<g >
+<title>main chunk (434 samples, 100.00%)</title><rect x="10.0" y="85" width="1180.0" height="15.0" fill="rgb(231,7,8)" rx="2" ry="2" />
 <text  x="13.00" y="95.5" >main chunk</text>
 </g>
 <g >
-<title>[C](-1): ? (482 samples, 100.00%)</title><rect x="10.0" y="101" width="1180.0" height="15.0" fill="rgb(210,151,24)" rx="2" ry="2" />
-<text  x="13.00" y="111.5" >[C](-1): ?</text>
+<title>function 'test_cpu.lua:45' (131 samples, 30.18%)</title><rect x="420.6" y="37" width="356.1" height="15.0" fill="rgb(230,39,30)" rx="2" ry="2" />
+<text  x="423.55" y="47.5" >function 'test_cpu.lua:45'</text>
+</g>
+<g >
+<title>global 'test' (434 samples, 100.00%)</title><rect x="10.0" y="69" width="1180.0" height="15.0" fill="rgb(219,176,37)" rx="2" ry="2" />
+<text  x="13.00" y="79.5" >global 'test'</text>
 </g>
 </g>
 </svg>
