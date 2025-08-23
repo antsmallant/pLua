@@ -20,6 +20,11 @@ tools/plua
 tools/png
 test/plua.log
 test/call.txt
+test/call.dot
+test/call.fl
+test/call.pro
+test/call.prof
+test/call.svg
 
 *~
 .*.swp
