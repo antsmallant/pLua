@@ -78,12 +78,72 @@ void llog(const char *header, const char *file, const char *func, int pos, const
     fclose(pLog);
 }
 
+/******************************************* copy from lua source *****************************************/
+/*                   
+** search for 'objidx' in table at index -1.
+** return 1 + string at top if find a good name.
+*/                   
+static int findfield(lua_State *L, int objidx, int level)
+{                    
+    if (level == 0 || !lua_istable(L, -1))
+        return 0;     /* not found */
+    lua_pushnil(L); /* start 'next' loop */
+    while (lua_next(L, -2))
+    { /* for each pair in table */
+        if (lua_type(L, -2) == LUA_TSTRING)
+        { /* ignore non-string keys */
+            if (lua_rawequal(L, objidx, -1))
+            {                /* found object? */
+                lua_pop(L, 1); /* remove value (but keep name) */
+                return 1;  
+            }              
+            else if (findfield(L, objidx, level - 1)) 
+            {                    /* try recursively */
+                lua_remove(L, -2); /* remove table (but keep name) */
+                lua_pushliteral(L, ".");
+                lua_insert(L, -2); /* place '.' between the two names */
+                lua_concat(L, 3); 
+                return 1;  
+            }              
+        }                
+        lua_pop(L, 1); /* remove value */
+    }                  
+    return 0; /* not found */
+}                    
+ 
+/*                   
+** Search for a name for a function in all loaded modules
+*/                   
+static int getglobalfuncname(lua_State *L, lua_Debug *ar, char *funcname, int funcname_len)
+{                    
+    int top = lua_gettop(L);
+    lua_getinfo(L, "f", ar); /* push function */
+    lua_getfield(L, LUA_REGISTRYINDEX, LUA_LOADED_TABLE);
+    if (findfield(L, top + 1, 2)) 
+    {                  
+        const char *name = lua_tostring(L, -1);
+        if (strncmp(name, "_G.", 3) == 0)
+        {                              /* name start with '_G.'? */
+            snprintf(funcname, funcname_len, "%s", name + 3);
+        }                
+        lua_settop(L, top); /* remove function and global table */
+        return 1;        
+    }                  
+    else               
+    {                  
+        lua_settop(L, top); /* remove function and global table */
+        return 0;        
+    }                  
+}
+
 static const int MAX_FUNC_NAME_SIZE = 512;
 
 static std::string get_funcname(lua_State *L, lua_Debug *ar) {
     char buf[MAX_FUNC_NAME_SIZE + 1] = {0};
-    // 仅当 name 存在且不是 "?" 时，才采用 namewhat/name；否则回退到定义位置
-    if (*ar->namewhat != '\0' && ar->name && strcmp(ar->name, "?") != 0) {
+
+    if (getglobalfuncname(L, ar, buf, MAX_FUNC_NAME_SIZE)) {
+    } else if (*ar->namewhat != '\0' && ar->name && strcmp(ar->name, "?") != 0) {
+        // 仅当 name 存在且不是 "?" 时，才采用 namewhat/name；否则回退到定义位置
         snprintf(buf, MAX_FUNC_NAME_SIZE, "%s '%s'", ar->namewhat, ar->name);
     } else if (*ar->what == 'm') {
         snprintf(buf, MAX_FUNC_NAME_SIZE, "main chunk");

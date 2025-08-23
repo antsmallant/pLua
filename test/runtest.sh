@@ -1,3 +1,7 @@
 #!/bin/bash
 
 ../dep/lua-5.3.6/install/bin/lua test_cpu.lua
+
+cd ../tools && sh show.sh ../test
+
+cd ../test && ../tools/pprof --text call.prof > call.txt

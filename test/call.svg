@@ -430,44 +430,44 @@
 <text id="matched" x="1090.00" y="149" > </text>
 <g id="frames">
 <g >
-<title>function 'test_cpu.lua:53' (152 samples, 35.02%)</title><rect x="776.7" y="37" width="413.3" height="15.0" fill="rgb(215,88,52)" rx="2" ry="2" />
-<text  x="779.73" y="47.5" >function 'test_cpu.lua:53'</text>
+<title>test (449 samples, 100.00%)</title><rect x="10.0" y="69" width="1180.0" height="15.0" fill="rgb(253,135,36)" rx="2" ry="2" />
+<text  x="13.00" y="79.5" >test</text>
 </g>
 <g >
-<title>all (434 samples, 100%)</title><rect x="10.0" y="117" width="1180.0" height="15.0" fill="rgb(227,200,9)" rx="2" ry="2" />
+<title>test21 (25 samples, 5.57%)</title><rect x="25.8" y="37" width="65.7" height="15.0" fill="rgb(221,225,33)" rx="2" ry="2" />
+<text  x="28.77" y="47.5" >test21</text>
+</g>
+<g >
+<title>test25 (135 samples, 30.07%)</title><rect x="835.2" y="37" width="354.8" height="15.0" fill="rgb(232,78,48)" rx="2" ry="2" />
+<text  x="838.21" y="47.5" >test25</text>
+</g>
+<g >
+<title>test23 (93 samples, 20.71%)</title><rect x="283.3" y="37" width="244.4" height="15.0" fill="rgb(212,225,6)" rx="2" ry="2" />
+<text  x="286.32" y="47.5" >test23</text>
+</g>
+<g >
+<title>all (449 samples, 100%)</title><rect x="10.0" y="117" width="1180.0" height="15.0" fill="rgb(230,169,17)" rx="2" ry="2" />
 <text  x="13.00" y="127.5" ></text>
 </g>
 <g >
-<title>global 'test1' (434 samples, 100.00%)</title><rect x="10.0" y="53" width="1180.0" height="15.0" fill="rgb(221,86,46)" rx="2" ry="2" />
-<text  x="13.00" y="63.5" >global 'test1'</text>
+<title>test1 (449 samples, 100.00%)</title><rect x="10.0" y="53" width="1180.0" height="15.0" fill="rgb(250,149,14)" rx="2" ry="2" />
+<text  x="13.00" y="63.5" >test1</text>
 </g>
 <g >
-<title>function 'test_cpu.lua:37' (72 samples, 16.59%)</title><rect x="224.8" y="37" width="195.8" height="15.0" fill="rgb(235,110,3)" rx="2" ry="2" />
-<text  x="227.79" y="47.5" >function 'test_cpu.lua:37'</text>
+<title>test22 (73 samples, 16.26%)</title><rect x="91.5" y="37" width="191.8" height="15.0" fill="rgb(209,7,43)" rx="2" ry="2" />
+<text  x="94.47" y="47.5" >test22</text>
 </g>
 <g >
-<title>function 'test_cpu.lua:29' (49 samples, 11.29%)</title><rect x="91.6" y="37" width="133.2" height="15.0" fill="rgb(210,7,51)" rx="2" ry="2" />
-<text  x="94.57" y="47.5" >function 'test_c..</text>
-</g>
-<g >
-<title>[C](-1): ? (434 samples, 100.00%)</title><rect x="10.0" y="101" width="1180.0" height="15.0" fill="rgb(233,6,13)" rx="2" ry="2" />
-<text  x="13.00" y="111.5" >[C](-1): ?</text>
-</g>
-<g >
-<title>function 'test_cpu.lua:21' (26 samples, 5.99%)</title><rect x="20.9" y="37" width="70.7" height="15.0" fill="rgb(208,173,17)" rx="2" ry="2" />
-<text  x="23.88" y="47.5" >functio..</text>
-</g>
-<g >
-<title>main chunk (434 samples, 100.00%)</title><rect x="10.0" y="85" width="1180.0" height="15.0" fill="rgb(231,7,8)" rx="2" ry="2" />
+<title>main chunk (449 samples, 100.00%)</title><rect x="10.0" y="85" width="1180.0" height="15.0" fill="rgb(243,87,45)" rx="2" ry="2" />
 <text  x="13.00" y="95.5" >main chunk</text>
 </g>
 <g >
-<title>function 'test_cpu.lua:45' (131 samples, 30.18%)</title><rect x="420.6" y="37" width="356.1" height="15.0" fill="rgb(230,39,30)" rx="2" ry="2" />
-<text  x="423.55" y="47.5" >function 'test_cpu.lua:45'</text>
+<title>test24 (117 samples, 26.06%)</title><rect x="527.7" y="37" width="307.5" height="15.0" fill="rgb(236,135,15)" rx="2" ry="2" />
+<text  x="530.73" y="47.5" >test24</text>
 </g>
 <g >
-<title>global 'test' (434 samples, 100.00%)</title><rect x="10.0" y="69" width="1180.0" height="15.0" fill="rgb(219,176,37)" rx="2" ry="2" />
-<text  x="13.00" y="79.5" >global 'test'</text>
+<title>[C](-1): ? (449 samples, 100.00%)</title><rect x="10.0" y="101" width="1180.0" height="15.0" fill="rgb(232,226,45)" rx="2" ry="2" />
+<text  x="13.00" y="111.5" >[C](-1): ?</text>
 </g>
 </g>
 </svg>
