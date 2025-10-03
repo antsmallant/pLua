@@ -17,6 +17,7 @@ Lua 性能分析工具
 - 直观，输出调用图，能直观的看到热点和调用关系，可兼容[gperftools](https://github.com/gperftools/gperftools)的pprof工具，可生成[火焰图](https://github.com/brendangregg/FlameGraph)
 
 ## 编译
+* 安装 go: https://golang.google.cn/doc/install  
 * 安装lua
 * 编译插件libplua.so及tools
 ```shell

@@ -13,6 +13,8 @@ if [ -f "$lua" ] && [ ! -d "$luadir" ]; then
   cd $projectdir && cp $projectdir/dep/lua-5.3.6/src/*.h $projectdir/src
 fi
 
+cd $projectdir/dep/lua-5.3.6 && make linux && make local
+
 cd $projectdir && cp $projectdir/dep/lua-5.3.6/src/*.h $projectdir/src
 
 if [ ! -d "$rundir" ]; then
